@@ -1,9 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overlay.cs // Terminal Edition</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
+  <div class="crt-overlay"></div>
+  <nav class="terminal-nav">
+    <div class="logo glitch" data-text="Overlay.cs">Overlay.cs</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#unity">Unity</a>
+      <a href="#assets">Assets</a>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#community">Community</a>
+    </div>
+  </nav>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+  <header id="home" class="hero-section">
+    <h1 class="typewriter">> Welcome to Overlay.cs Game Forge_</h1>
+    <p class="subtitle">Your terminal to Unity game creation</p>
+    <div class="hero-buttons">
+      <a href="https://discord.com/invite/YyS7zcDzmF" target="_blank" class="btn glitch-btn">Join Discord</a>
+      <a href="https://www.youtube.com/@Keo_CS_YT" target="_blank" class="btn glitch-btn">YouTube</a>
+    </div>
+  </header>
 
+  <section id="about" class="section">
+    <h2 class="glitch" data-text="About">About</h2>
+    <div class="section-content">
+      <p>
+        Overlay.cs is a command-line inspired dev hub built for Unity creators. Whether you're building VR experiments or 2D speedrunners, this space helps you prototype, refine, and ship.
+      </p>
+    </div>
+  </section>
+
+  <section id="unity" class="section">
+    <h2 class="glitch" data-text="Unity">Unity</h2>
+    <div class="terminal-card">
+      <pre><code>$ setup unity --vr --3d --urp
+✓ Starter templates
+✓ Scene & input setup
+✓ Fusion-ready network base</code></pre>
+    </div>
+  </section>
+
+  <section id="assets" class="section">
+    <h2 class="glitch" data-text="Assets">Assets</h2>
+    <div class="terminal-card">
+      <pre><code>$ pull unity-assets --tag=effects,environment,shader
+✓ Free & Premium packs
+✓ Game-ready prefabs
+✓ Custom shaders + audio FX</code></pre>
+    </div>
+  </section>
+
+  <section id="tutorials" class="section">
+    <h2 class="glitch" data-text="Tutorials">Tutorials</h2>
+    <p class="subtitle">From concept to component.</p>
+    <div class="terminal-card">
+      <pre><code>1. XR Toolkit Integration
+2. Fusion Multiplayer Basics
+3. Custom ShaderGraph Effects
+4. Component-Based Architecture</code></pre>
+    </div>
+  </section>
+
+  <section id="community" class="section">
+    <h2 class="glitch" data-text="Community">Community</h2>
+    <p class="subtitle">Built by devs. For devs. In C#.</p>
+    <a href="https://discord.com/invite/YyS7zcDzmF" class="btn glitch-btn">Enter Discord Server</a>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-glitch">&copy; 2025 Overlay.cs | Code clean. Build wild.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

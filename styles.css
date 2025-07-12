@@ -1,0 +1,175 @@
+/* styles.css */
+body {
+  background: #0f0f0f;
+  color: #00ff99;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.crt-overlay {
+  pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 150, 0.03) 0,
+    rgba(0, 255, 150, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: 9999;
+  mix-blend-mode: overlay;
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.terminal-nav {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #00ff99;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #00ff99;
+}
+
+.nav-links a {
+  color: #00ff99;
+  text-decoration: none;
+  margin-left: 2rem;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '_';
+  position: absolute;
+  right: -10px;
+  opacity: 0.7;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 10vh 2rem;
+}
+
+.typewriter {
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00ff99;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #00ff99; }
+}
+
+.subtitle {
+  margin-top: 1rem;
+  color: #0affef;
+}
+
+.btn {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #00ff99;
+  background: black;
+  color: #00ff99;
+  text-decoration: none;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.btn:hover {
+  background: #00ff99;
+  color: black;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+.glitch {
+  position: relative;
+  color: #00ff99;
+  text-shadow: 1px 0 magenta, -1px 0 cyan;
+}
+
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+  color: #f0f;
+  z-index: 1;
+}
+
+.glitch::after {
+  animation: glitchBottom 2s infinite linear alternate-reverse;
+  color: #0ff;
+  z-index: 2;
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  20% { clip: rect(10px, 9999px, 30px, 0); }
+  40% { clip: rect(5px, 9999px, 20px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  25% { clip: rect(40px, 9999px, 60px, 0); }
+  50% { clip: rect(30px, 9999px, 50px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+.section {
+  padding: 5rem 2rem;
+  border-top: 1px dashed #00ff99;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.terminal-card {
+  background: #111;
+  border: 1px solid #00ff99;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #0affef;
+  text-align: left;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: #0affef;
+  border-top: 1px solid #00ff99;
+}
